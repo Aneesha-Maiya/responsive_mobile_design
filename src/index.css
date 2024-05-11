@@ -1,0 +1,239 @@
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+body{
+  margin: 0px;
+}
+.mainHeader{
+  width: 100%;
+  height: 7vh;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns:  10% 7% 78% 5%;
+  justify-items: right;
+  align-items: center;
+}
+.logo{
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  margin: 0vw 1vw;
+}
+.CompanyName{
+  margin: 0px;
+  font-family: 'Roboto';
+  font-size: 1.5vw;
+  font-weight: 500;
+  margin: 0vw 0vw;
+}
+.navBar{
+  margin: 0vw 1vw;
+}
+.navBar ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0px;
+  padding: 0.1rem;
+  column-gap: 3vw;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 1.25vw;
+}
+.navToggle{
+  display: none;
+}
+.MainPage{
+  background: rgb(165,233,255);
+  background: linear-gradient(90deg, rgba(165,233,255,1) 0%, rgba(255,255,255,1) 100%); 
+  height: 75vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  font-family: 'Roboto';
+}
+.MainPage p{
+  margin: 0vw;
+}
+.mainContent{
+  padding: 5vw 5vw;
+}
+/* .MobileDropdown{
+  display: none;
+} */
+.MobileDropdown{
+  display: none;
+  position: absolute;
+  top: 8%;
+  padding: 1vh;
+  border: 1px solid black;
+  background-color: white;
+}
+.MobileDropdown ul{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0px;
+  padding: 0.1rem;
+  row-gap: 1vh;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 1.25vw;
+  font-size: 1.5vh;
+  margin: 0.2vh;
+}
+.MobileDropdown ul li:hover{
+  color: blue;
+}
+.HeroText{
+  font-size: 3vw;
+  font-weight: 700;
+  padding: 2vh 0vw 1vh 0vw;
+}
+.SubHeroText{
+  display: flex;
+  font-size: 3vw;
+  font-weight: 700;
+  padding: 1vh 0vw 2vh 0vw;
+}
+.description{
+  font-size: 1.75vw;
+  font-weight: 500;
+  color: rgb(83, 82, 82);
+  line-height: 1.6 ;
+  padding: 1vh 0vw 2vh 0vw;
+}
+.SubHeroText .Service{
+  color: rgb(6, 112, 250);
+  margin-left: 1vw;
+}
+.ReachUsBtn{
+  background-color: rgb(6, 112, 250);
+  color: white;
+  border: none;
+  padding: 1vh 2vw;
+  font-family: 'Roboto';
+  font-size: 1.5vw;
+  border-radius: 1vw;
+  margin: 1vw 0vw;
+}
+.sideContent{
+  padding: 10vh 5vw;
+}
+.SideImage{
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .mainHeader{
+    grid-template-columns: 15% 20% 55% 10%;
+  }
+  .navBar{
+    display: none;
+  }
+  .CompanyName{
+    font-size: 2vh;
+  }
+  .navToggle{
+    display:initial;
+  }
+  .MobileDropdown{
+    display: initial;
+  }
+  .MainPage{
+    grid-template-columns: auto;
+  }
+  .HeroText{
+    text-align: center;
+    font-size: 3vh;
+  }
+  .description{
+    text-align: center;
+    font-size: 1.75vh;
+  }
+  .SubHeroText{
+    display: grid;
+    text-align: center;
+    row-gap: 1vh;
+    padding: 1vh 0vw 1vh 0vw;
+    font-size: 3vh;
+  }
+  .sideContent{
+    padding: 3vh 5vw;
+  }
+  .ReachUsBtn{
+    position: absolute;
+    left: 40%;
+    font-size: 2vh;
+  }
+  .SideImage{
+    height: 100%;
+    width: 100%;
+    padding: 1vh;
+  }
+}
