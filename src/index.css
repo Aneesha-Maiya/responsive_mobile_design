@@ -66,6 +66,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+:root{
+  --about-us-background: rgba(52,60,73,255)
+}
 body{
   margin: 0px;
 }
@@ -104,6 +107,9 @@ body{
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 1.25vw;
+}
+.navBar a{
+  text-decoration: none;
 }
 .navToggle{
   display: none;
@@ -145,6 +151,10 @@ body{
   font-size: 1.25vw;
   font-size: 1.5vh;
   margin: 0.2vh;
+  transition: transform 0.4s;
+}
+.MobileDropdown a{
+  text-decoration: none;
 }
 .MobileDropdown ul li:hover{
   color: blue;
@@ -188,7 +198,84 @@ body{
   height: 100%;
   width: 100%;
 }
-
+.CarousalComponent{
+  border: 1px solid black;
+  height: 15vh;
+  padding: 1vw;
+  background-color: rgb(214, 243, 252);
+}
+.CarousalComponent h1{
+  margin: 1vh 0vw;
+  font-family: 'Roboto';
+  text-align: center;
+}
+.LogoCarousal{
+  position: absolute;
+  /* border: 1px solid brown; */
+  height: 15vh;
+  width: 50%;
+  left: 25%;
+  right: 25%;
+  background-color: rgb(214, 243, 252);
+  padding: 2vh;
+  height: 10%;
+}
+.CarousalItem{
+  display: grid;
+  grid-template-columns: auto auto;
+  /* border: 1px solid gold; */
+  background-color: rgb(214, 243, 252);
+  padding: 1.5vh;
+  align-items: center;
+  justify-content: center;
+}
+.CarousalItem p{
+  margin: 1vh;
+  font-size: 3vh;
+  font-family: 'Roboto';
+  font-weight: 700;
+}
+.CarousalItem .SponsorLogo{
+  width: 5vh;
+  height: 5vh;
+}
+.AboutUsSection{
+  border: 1px solid black;
+  height: 75vh;
+  font-family: 'Roboto';
+  background-color: var(--about-us-background);
+  color: rgb(202, 201, 201);
+}
+.AboutUsSection h2{
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  margin: 1rem 0vw;
+}
+.AboutUsContent{
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+.AboutUsText{
+  padding: 1.5rem 3rem;
+}
+.AboutUsText p{
+  margin: 0px;
+  font-size: 1.2rem;
+  line-height: 1.75rem;
+}
+.AboutUsImage{
+  padding: 1rem;
+}
+.AboutUsImage img{
+  width: 90%;
+  height: 90%;
+  margin: 1vw;
+  transition: transform 0.4s;
+}
+.AboutUsImage img:hover{
+  transform: scale(1.1,1.1);
+}
 @media only screen and (max-width: 768px) {
   .mainHeader{
     grid-template-columns: 15% 20% 55% 10%;
@@ -201,6 +288,10 @@ body{
   }
   .navToggle{
     display:initial;
+    transition: transform 0.4s;
+  }
+  .navToggle:hover{
+    transform: scale(1.5,1.5);
   }
   .MobileDropdown{
     display: initial;
@@ -232,8 +323,57 @@ body{
     font-size: 2vh;
   }
   .SideImage{
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 95%;
     padding: 1vh;
+  }
+  .CarousalComponent{
+    display: grid;
+    grid-template-columns: auto;
+    height: 10vh;
+    padding: 1vh;
+    align-items: center;
+  }
+  .LogoCarousal{
+    justify-self: center;
+    width: 80%;
+    height: auto;
+    padding: 1vh;
+  }
+  .CarousalItem{
+    padding: 1vh;
+  }
+  .CarousalItem p{
+    font-size: 2vh;
+  }
+  .CarousalItem .SponsorLogo{
+    width: 3vh;
+    height: 3vh;
+  }
+  .AboutUsSection{
+    height: 80vh;
+  }
+  .AboutUsSection h2{
+    font-size: 3vh;
+    margin: 1vh 0vh;
+  }
+  .AboutUsContent{
+    grid-template-columns: auto;
+  }
+  .AboutUsText{
+    padding: 2vh;
+  }
+  .AboutUsText p{
+    font-size: 1.75vh;
+    line-height: 3vh;
+  }
+  .AboutUsImage{
+    padding: 1vh;
+    /* background-color: aquamarine; */
+    height: 80%;
+  }
+  .AboutUsImage img{
+    width: 98%;
+    height: 95%;
   }
 }

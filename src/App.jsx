@@ -5,6 +5,8 @@ import './App.css'
 
 import Header from '../components/Header'
 import Main from '../components/Main'
+import Carousal from '../components/Carousal'
+import AboutUs from '../components/AboutUs'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +15,10 @@ function App() {
     <>
       <Header/>
       <Main/>
+      <Carousal/>
+      <div className='About_Us' id='About-Us'>
+          <AboutUs/>
+      </div>
     </>
   )
 }

@@ -16,11 +16,11 @@ export default function Header() {
         <p className='CompanyName'>Perspectify</p>
         <div className='navBar'>
             <ul>
-                <li>About Us</li>
-                <li>Services</li>
-                <li>Portfolio</li>
-                <li>Testimonials</li>
-                <li>Contacts</li>
+                <li><a href='#About-Us'>About Us</a></li>
+                <li><a href='#About-Us'>Services</a></li>
+                <li><a>Portfolio</a></li>
+                <li><a>Testimonials</a></li>
+                <li><a>Contacts</a></li>
             </ul>
         </div>
         <div className='navToggle'>
@@ -30,11 +30,11 @@ export default function Header() {
         </div>
         {showMobileDropdown && <div className='MobileDropdown' id='mobileDropdown'>
             <ul>
-                <li>About Us</li>
-                <li>Services</li>
-                <li>Portfolio</li>
-                <li>Testimonials</li>
-                <li>Contacts</li>
+                <li><a href='#About-Us'>About Us</a></li>
+                <li><a href='#About-Us'>Services</a></li>
+                <li><a>Portfolio</a></li>
+                <li><a>Testimonials</a></li>
+                <li><a>Contacts</a></li>
             </ul>
         </div>}
     </div>
